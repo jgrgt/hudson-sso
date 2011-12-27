@@ -1,0 +1,28 @@
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define"
+  xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form">
+  <f:entry title="Cloud API Server" field="server">
+    <f:textbox />
+  </f:entry>
+  <f:entry title="Cloud API Path" field="path">
+    <f:textbox />
+  </f:entry>
+
+  <f:entry title="Machines" description="List of machines">
+    <f:repeatable field="machines">
+      <table width="100%">
+        <f:entry title="Machine name" field="name">
+          <f:textbox />
+        </f:entry>
+
+        <f:entry title="">
+          <div align="right">
+            <f:repeatableDeleteButton />
+          </div>
+        </f:entry>
+        <f:entry title="labels" field="labelString">
+          <f:textbox />
+        </f:entry>
+      </table>
+    </f:repeatable>
+  </f:entry>
+</j:jelly>
